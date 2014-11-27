@@ -22,7 +22,9 @@ if(isset($_POST['Submit'])) {
 
 	$retval = mysql_query($sql, $connect);
 	
-	if($retval) {
+	$row = mysql_num_rows($retval);
+	
+	if($row > 0) {
 		$error = "Please Unreserve all Books Before Deleting Account";
 	} else {
 						
