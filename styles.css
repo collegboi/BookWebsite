@@ -1,0 +1,80 @@
+body {
+	margin: 0px;
+}
+
+
+#header {
+	text-align: center;
+    background-color:#b8e4ff;
+    color:#5294ff;
+    padding:50px;
+}
+#nav {
+    line-height:30px;
+    background-color:#ffffff;
+    height:400px;
+    width:180px;
+    float:left;
+    padding:5px; 
+}
+#mainBody {
+    width:100%;
+    padding:10px;
+}
+#mainBody1 {
+    width:100%;
+    padding:30px;
+    color: #5294ff;
+    font-family:arial; 
+	font-size: 20px;
+	position: absolute;
+	left: 200px;
+}
+
+#searchBody {
+	width: 400px;
+	padding: 10px;
+	
+}
+
+#display {
+	position:absolute; 
+	right:100px;
+	padding: 10px;
+	top: 160px;	
+}
+
+#footer {
+    background-color:#72d1f4;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:0px; 
+    position: relative;
+    width:100%;
+    bottom: 0;
+
+}
+
+imgBook{
+	position: absolute;
+    left: 900px;
+    top: 150px;
+    
+}
+
+#user {
+	position:absolute; 
+	top:120px; 
+	right:60px; 
+	width:200px;
+	height:40px;
+	color: white;
+}
+
+.error { 
+  color: #ff0707; 
+  font-family:arial; 
+  font-size: 15px; 
+}
+
