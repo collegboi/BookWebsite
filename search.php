@@ -1,7 +1,4 @@
 <?php
-include("searchReserve.php");
-?>
-<?php
 	
 session_start();
 $username = $_SESSION['login_user'];
@@ -69,7 +66,7 @@ if (isset($_POST['Search'])) {
 				} else {
 					//echo ($row[6]);
 					?>
-						<form action="" method="post">
+						<form action="reservePage.php" method="post">
 						<input type="hidden" value="<?php echo $ISBN; ?>" name="ISBN">
 						<input type="submit" name="Reserve" value="Reserve">
 						</form>

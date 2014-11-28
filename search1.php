@@ -5,6 +5,12 @@ include("searchReserve.php");
 <?php
 
 $error ="";
+
+session_start();
+$username = $_SESSION['login_user'];
+
+$date = date('Y-m-d');
+
 $rec_limit = 5;
 
 $dbhost = 'localHost';
@@ -29,6 +35,7 @@ $searchAuthor = $_POST['Author'];
 
 	//searches category tables for id of category user is searching by
 	if(!empty($searchCat)){
+	
 		$sql1 = "select * from Catagories  where CategoryDesc = '$searchCat'";
 		mysql_select_db('bookWeb');
 		$retval1 = mysql_query($sql1);
@@ -48,8 +55,6 @@ $searchAuthor = $_POST['Author'];
 	
 	$rec_count = $num_rows;
 	
-	echo($rec_count);
-
 	if( isset($_GET{'page'} ) )
 	{
 	   $page = $_GET{'page'} + 1;
@@ -107,7 +112,7 @@ $searchAuthor = $_POST['Author'];
 				} else {
 					//echo ($row[6]);
 					?> 
-						<form action="" method="post">
+						<form action="searchReserve.php" method="post">
 						<input type="hidden" value="<?php echo $ISBN; ?>" name="ISBN">
 						<input type="submit" name="Reserve" value="Reserve">
 						</form> 

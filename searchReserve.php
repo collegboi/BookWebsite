@@ -21,6 +21,8 @@ if(isset($_POST['Reserve'])) {
 
 		$ISBN = $_POST['ISBN'];
 		
+		echo($ISBN);
+		
 		$sql = "INSERT INTO Reservations(ISBN, Username, RervationDate) VALUES ('$ISBN', '$username', '$date')";	
 
 		$retreval = mysql_query($sql);
